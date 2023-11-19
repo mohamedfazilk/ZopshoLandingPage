@@ -1,0 +1,35 @@
+<svg width="45" height="41" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 55">
+<g id="glasses--vision-sunglasses-protection-spectacles-correction-sun-eye-glasses">
+<path id="Rectangle 787" d="M2 27.675H18.4V39.975H2V27.675Z" fill="#D7E0FF"/>
+<path id="Rectangle 788" d="M26.6 27.675H43V39.975H26.6V27.675Z" fill="#D7E0FF"/>
+<path id="Rectangle 789" d="M2 27.675H18.4V39.975H2V27.675Z" stroke="url(#paint0_linear_26_1196)" stroke-width="2.05"/>
+<path id="Rectangle 790" d="M26.6 27.675H43V39.975H26.6V27.675Z" stroke="url(#paint1_linear_26_1196)" stroke-width="2.05"/>
+<path id="Vector 2310" d="M18.4 27.675H26.6" stroke="url(#paint2_linear_26_1196)" stroke-width="2.05"/>
+<path id="Vector 2311" d="M2 27.675V1.02502H8.15" stroke="url(#paint3_linear_26_1196)" stroke-width="2.05"/>
+<path id="Vector 2312" d="M43 27.675V1.02502H36.85" stroke="url(#paint4_linear_26_1196)" stroke-width="2.05"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_26_1196" x1="10.2" y1="27.675" x2="10.2" y2="39.975" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D541C6" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#6741D5"/>
+</linearGradient>
+<linearGradient id="paint1_linear_26_1196" x1="34.8" y1="27.675" x2="34.8" y2="39.975" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D541C6" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#6741D5"/>
+</linearGradient>
+<linearGradient id="paint2_linear_26_1196" x1="22.5" y1="27.675" x2="22.5" y2="28.675" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D541C6" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#6741D5"/>
+</linearGradient>
+<linearGradient id="paint3_linear_26_1196" x1="5.075" y1="1.02502" x2="5.075" y2="27.675" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D541C6" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#6741D5"/>
+</linearGradient>
+<linearGradient id="paint4_linear_26_1196" x1="39.925" y1="1.02502" x2="39.925" y2="27.675" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D541C6" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#6741D5"/>
+</linearGradient>
+</defs>
+</svg>
