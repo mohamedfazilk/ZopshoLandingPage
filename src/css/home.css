@@ -1,0 +1,113 @@
+.main-home-div {
+  width: 100vw;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+}
+.home-styled-left {
+  padding-top: 20px;
+  padding-left: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+  /* padding-top: 10rem;
+  padding-left: 10px; */
+  /* margin-bottom: 14px; */
+}
+.home-styled-heading {
+  color: #fff;
+  font-family: Dela Gothic One;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.home-styled-typo {
+  color: #fff;
+  font-family: Dela Gothic One;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.home-arrow-img {
+  margin-left: 17rem;
+  width: 237px;
+  height: 17px;
+}
+.home-styled-text {
+  color: #fff;
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.home-styled-img {
+  /* margin-left: 11rem;
+  margin-top: 15rem; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.home-lottie-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  width: 122px;
+  height: 122px;
+  transform: translate(-50%, -50%);
+}
+.home-delivery-image {
+  width: 600px;
+  height: 400px;
+}
+.home-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* for tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*for mobile view*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .main-home-div {
+    flex-direction: column;
+    height: 700px;
+  }
+  .home-div {
+    flex-direction: column;
+  }
+
+  .home-styled-left {
+    padding-top: 10px;
+    padding-left: 5px;
+    width: 100%;
+    display: flex;
+  }
+  .home-styled-heading {
+    font-size: 25px;
+  }
+  .home-styled-typo {
+    font-size: 20px;
+  }
+  .home-arrow-img {
+    margin-left: 10rem;
+    width: 150px;
+    height: 17px;
+  }
+  .home-styled-img {
+    width: 100%;
+    align-items: center;
+  }
+  .home-delivery-image {
+    width: 300px;
+    height: 500px;
+  }
+}
