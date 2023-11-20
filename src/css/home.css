@@ -121,8 +121,8 @@
   }
 
   .home-styled-left {
-    padding-top: 10px;
-    padding-left: 5px;
+    /* padding-top: 10px;
+    padding-left: 5px; */
     width: 100%;
     display: flex;
   }

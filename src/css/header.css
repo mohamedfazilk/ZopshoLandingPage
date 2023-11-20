@@ -1,0 +1,36 @@
+.header-main-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 0px;
+  /* margin-bottom: 20px; */
+  background-color: #0e0b34;
+}
+.header-content-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5rem;
+  margin-left: 2rem;
+}
+.header-content-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-right: 38px;
+  /* order: [1, 0]; */
+}
+.header-content-left-drawer-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* for tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*for mobile view*/
+@media (min-width: 320px) and (max-width: 480px) {
+}
