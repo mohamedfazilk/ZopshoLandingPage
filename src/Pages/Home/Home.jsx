@@ -152,20 +152,95 @@ const Home = () => {
           <h4 className="home-styled-text">
             Open 8:00 AM to late night everyday
           </h4>
-          <ButtonBox>
-            <TryItButton size="small">
-              <TryItText>Try it now</TryItText>
-            </TryItButton>
+          <div className="home-button-box">
+            <Button
+              size="small"
+              sx={{
+                "@media (max-width: 600px)": {
+                  width: "180x",
+                  height: "35px",
+                  borderRadius: " 6px",
+                  background:
+                    "linear-gradient(268deg, #ff1f3f 3.11%, rgba(255, 31, 192, 0.79) 99.33%)",
+                  fontSize: "15px",
+                  textTransform: "none",
+                  fontWeight: 400,
+                  color: "white",
+                },
+                "@media (min-width: 601px) and (max-width: 960px)": {
+                  width: "193px",
+                  height: "47px",
+                  borderRadius: " 6px",
+                  background:
+                    "linear-gradient(268deg, #ff1f3f 3.11%, rgba(255, 31, 192, 0.79) 99.33%)",
+                  fontSize: "20px",
+                  textTransform: "none",
+                  fontWeight: 400,
+                  color: "white",
+                },
+                "@media (min-width: 970px) ": {
+                  width: "193px",
+                  height: "47px",
+                  borderRadius: " 6px",
+                  background:
+                    "linear-gradient(268deg, #ff1f3f 3.11%, rgba(255, 31, 192, 0.79) 99.33%)",
+                  fontSize: "20px",
+                  textTransform: "none",
+                  fontWeight: 400,
+                  color: "white",
+                },
+              }}
+            >
+              Try it now
+            </Button>
 
-            <ContactNowButton
+            <Button
+              sx={{
+                "@media (max-width: 600px)": {
+                  width: "180px",
+                  height: "35px",
+                  borderRadius: " 6px",
+                  border: "1px solid #e0e0e0",
+                  fontSize: "15px",
+                  textTransform: "none",
+                  fontWeight: 400,
+                  color: "white",
+                  marginLeft: "11px",
+                  whiteSpace: "nowrap",
+                },
+                "@media (min-width: 601px) and (max-width: 960px)": {
+                  width: "193px",
+                  height: "47px",
+                  borderRadius: " 6px",
+                  border: "1px solid #e0e0e0",
+                  fontSize: "20px",
+                  textTransform: "none",
+                  fontWeight: 400,
+                  color: "white",
+                  marginLeft: "11px",
+                  whiteSpace: "nowrap",
+                },
+                "@media (min-width: 970px) ": {
+                  width: "193px",
+                  height: "47px",
+                  borderRadius: " 6px",
+                  border: "1px solid #e0e0e0",
+                  fontSize: "20px",
+                  textTransform: "none",
+                  fontWeight: 400,
+                  color: "white",
+                  marginLeft: "11px",
+                  whiteSpace: "nowrap",
+                },
+              }}
               size="small"
               startIcon={
                 <img style={{ marginLeft: "5px" }} alt="" src={arrowImg} />
               }
             >
               <ContactNowText>Contact now</ContactNowText>
-            </ContactNowButton>
-          </ButtonBox>
+            </Button>
+          </div>
         </div>
         {/* </StyledLeft> */}
         <div className="home-styled-img">

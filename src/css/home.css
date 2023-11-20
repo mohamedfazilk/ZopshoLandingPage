@@ -70,6 +70,41 @@
   display: flex;
   align-items: center;
 }
+.home-button-box {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4.5rem;
+}
+.home-try-it-button {
+  width: 193px;
+  height: 47px;
+  border-radius: 6px;
+  background: linear-gradient(
+    268deg,
+    #ff1f3f 3.11%,
+    rgba(255, 31, 192, 0.79) 99.33%
+  );
+}
+.home-try-it-text {
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 400;
+  color: white;
+}
+.home-contact-now-button {
+  width: 193px;
+  height: 47px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+.home-contact-now-text {
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 400;
+  color: white;
+  margin-left: 11px;
+  white-space: nowrap;
+}
 
 /* for tablet view */
 @media (min-width: 768px) and (max-width: 1024px) {
