@@ -27,15 +27,8 @@ const NumberText = styled(Box)(() => ({
   lineHeight: "normal",
 }));
 
-const Order_content = () => {
+const OrderContents = () => {
   return (
-    // <Box
-    //   style={{ width: "100%", height: "342px", background: "#FFFCFC" }}
-    //   sx={{
-    //     width: "100%",
-    //     marginTop: "52px",
-    //   }}
-    // >
     <div className="order-content-main-div">
       <div className="order-content-div">
         <div className="order-content-heading">
@@ -148,4 +141,4 @@ const Order_content = () => {
   );
 };
 
-export default Order_content;
+export default OrderContents;

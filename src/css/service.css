@@ -1,0 +1,24 @@
+.service-main-div {
+  width: 100%;
+}
+
+.service-div {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  align-items: center;
+}
+/* for tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*for mobile view*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .service-main-div {
+    margin-top: 150px;
+  }
+
+  .service-div {
+    flex-direction: column;
+  }
+}

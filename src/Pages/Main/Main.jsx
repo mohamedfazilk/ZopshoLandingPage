@@ -5,7 +5,7 @@ import Discoverpage from "../Discover/Discoverpage";
 import Footer from "../Footer/Footer";
 import GetTouch from "../GetTouch/GetTouch";
 import Home from "../Home/Home";
-import Order_content from "../OrderContent/Order_content";
+import OrderContent from "../OrderContent/OrderContents";
 import Service from "../Service/Service";
 
 const Main = () => {
@@ -17,9 +17,9 @@ const Main = () => {
     >
       <Header />
       <Home />
-      <Order_content />
-      {/* <Service /> */}
-      {/* <AboutUs /> */}
+      <OrderContent />
+      <Service />
+      <AboutUs />
       {/* <GetTouch /> */}
       {/* <Discoverpage /> */}
       {/* <Footer /> */}
