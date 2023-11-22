@@ -3,7 +3,7 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
 import DeliveryImg from "../../assets/deliveryboy.svg";
 import HometextImg from "../../assets/curve.svg";
-import { styled } from "@mui/material";
+import { styled,css } from "@mui/material";
 import BackroundImg from "../../assets/background.svg";
 import Lottie from "react-lottie";
 import animation from "../../assets/animation.json";
@@ -92,6 +92,12 @@ const ContactNowText = styled(Typography)`
   color: white;
   margin-left: 11px;
   white-space: nowrap;
+
+  ${props => css`
+    @media (min-width: 320px) and (max-width: 480px) {
+      font-size: 14px;
+    }
+  `}
 `;
 
 // const LottieWrapper = styled(Box)`
@@ -131,9 +137,9 @@ const Home = () => {
     <div
       className="main-home-div"
       style={{
-        background: `#0e0b34 url(${BackroundImg}) repeat-x right`,
+        background: `#0e0b34 url(${BackroundImg}) no-repeat right center`,
         backgroundSize: "600px 442px",
-        backgroundRepeat: "no-repeat,",
+        
       }}
     >
       {" "}
@@ -142,7 +148,7 @@ const Home = () => {
         {" "}
         <div className="home-styled-left">
           {" "}
-          <div>
+          <div className="home-styled-main">
             <h3 className="home-styled-heading">No need to run again</h3>
 
             <img src={HometextImg} alt="" className="home-arrow-img"></img>
@@ -189,6 +195,12 @@ const Home = () => {
                   fontWeight: 400,
                   color: "white",
                 },
+                "@media (min-width: 320px) and (max-width: 480px)":{
+                  width:"113px",
+                  height:"34px",
+                  fontSize:'13px',
+
+                }
               }}
             >
               Try it now
@@ -232,10 +244,18 @@ const Home = () => {
                   marginLeft: "11px",
                   whiteSpace: "nowrap",
                 },
+
+                "@media (min-width: 320px) and (max-width: 480px) ":{
+                  width: '91px',
+                  height:'18px',
+                  border:'none',
+                  fontSize: "14px",
+                  marginTop:'3%',
+                }
               }}
               size="small"
               startIcon={
-                <img style={{ marginLeft: "5px" }} alt="" src={arrowImg} />
+                <img style={{ marginLeft: "5px" }} className="contact-arrow" alt="" src={arrowImg} />
               }
             >
               <ContactNowText>Contact now</ContactNowText>
@@ -245,7 +265,7 @@ const Home = () => {
         {/* </StyledLeft> */}
         <div className="home-styled-img">
           <div className="home-lottie-wrapper">
-            <Lottie options={lottieOptions} height={122} width={122} />
+            <Lottie className='lottie-icon' options={lottieOptions} height={122} width={122} />
           </div>
           <img src={DeliveryImg} alt="" className="home-delivery-image"></img>
         </div>

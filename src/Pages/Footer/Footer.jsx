@@ -1,12 +1,13 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import {Container, styled} from '@mui/material';
+import {Container, styled,css} from '@mui/material';
 import LogoImg from '../../assets/footerlogo.svg'
 import WhatsappImg from '../../assets/whatsappImg.svg'
 import FacebookImg from '../../assets/FaceImg.svg'
 import InstaImg from '../../assets/InstaImg.svg'
 import LInkedinImg from '../../assets/LinkedIMg.svg'
+import '../../css/footer.css'
 
 const MainContainer = styled(Box)`
 background: #1F1F1F;
@@ -23,6 +24,14 @@ display: flex;
 const LogoBox = styled(Box)`
 width: 135px;
 height: 47.588px;
+
+${props => css`
+@media (min-width: 320px) and (max-width: 480px) {
+    width: 103px;
+    height: 31.623px;
+    flex-shrink: 0;
+}
+`}
 `
 
 const StyledTypo = styled(Typography)`
@@ -34,6 +43,11 @@ font-style: normal;
 font-weight: 400;
 line-height: 198.023%;
 color: #FFF;
+${props => css`
+@media(min-width: 320px) and (max-width: 508px) {
+    font-size: 13px;
+}
+`}
 `
 const StyledHeading = styled(Typography)`
 color: #FFF;
@@ -43,6 +57,11 @@ font-style: normal;
 font-weight: 500;
 line-height: 159.023%; /* 28.624px */
 white-space:nowrap
+${props => css`
+@media (min-width: 320px) and (max-width: 508px) {
+font-size:13px;
+}
+`}
 `
 const StyledText = styled(Typography)`
 color:white
@@ -53,6 +72,11 @@ font-style: normal;
 font-weight: 400;
 line-height: 159.023%;
 white-space: nowrap;
+${props => css`
+@media (min-width: 320px) and (max-width: 480px) {
+    font-size:11px;
+}
+`}
 `
 const ContentBox = styled(Box)`
 
@@ -123,23 +147,29 @@ display: flex;
 const Footer = () => {
   return (
     <>
-    <MainContainer>
-    <StyledContainer>
-        <Box sx={{
-            marginRight:'14rem'
+    <footer className='Main-footer'>
+    <div className='footer-div'>
+        <Box className='footer-box' sx={{
+            marginRight:'14rem',
+            "@media (min-width: 320px) and (max-width: 480px)":{
+                marginRight:'0px',
+                marginLeft:'-19%'
+            }
         }}>
             <LogoBox>
             <img src={LogoImg} style={{width:'100%', height:'100%'}}></img>
             </LogoBox>
-            <StyledTypo>
+            <div className='styled-typo'>
+            <StyledTypo className='styled-typo-text'>
             Welcome to zopsho, a dynamic and innovative company
              dedicated to driving the success of startups and emerging businesses. 
             </StyledTypo>
+            </div>
         </Box>
 
-    <ContentSection>
-
-    <ContentBox>
+    <div className='content-section'>
+        <div className='service-content'>
+    <div>
        <StyledHeading>
        Services
        </StyledHeading>
@@ -158,9 +188,9 @@ const Footer = () => {
        Graphics Designing
        </StyledText>
        </ParaBox>
-      </ContentBox>
+      </div>
 
-        <ContentBox>
+        <div>
        <StyledHeading>
        Social Link
        </StyledHeading>
@@ -177,10 +207,12 @@ const Footer = () => {
        </StyledText>
        </ParaBox>
        
-      </ContentBox>
+      </div>
+
+      </div>
 
 
-        <ContentBox>
+        <div>
        <StyledHeading>
        Company
        </StyledHeading>
@@ -196,16 +228,16 @@ const Footer = () => {
        Contact
        </StyledText>
        </ParaBox>
-      </ContentBox>
+      </div>
 
 
       
 
-      </ContentSection>
-       </StyledContainer>
+      </div>
+       </div>
 
 
-       <BottomContainer>
+       <div className='bottom-div'>
         <StyledCopyright>
             <TermsText>
         <CopyrightText>
@@ -233,8 +265,8 @@ const Footer = () => {
         <img src={InstaImg}></img>
         <img src={LInkedinImg}></img>
         </StyledIcons>
-       </BottomContainer>
-    </MainContainer>
+       </div>
+       </footer>
     </>
   )
 }

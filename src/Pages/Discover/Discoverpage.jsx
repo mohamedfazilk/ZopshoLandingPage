@@ -10,15 +10,12 @@ import BackgroundImg from '../../assets/Discoverbackground.svg'
 import PhoneImg from '../../assets/phoneimg.svg'
 import GooglePlayImg from '../../assets/Googleplay.svg'
 import AppstoreImg from '../../assets/Applestore.svg'
+import '../../css/discover.css'
 
 
 
 const StyledContainer = styled(Container)`
-background-position: center center,
-text-align:center;
-position:relative;
-margin-top:2%;
-display:flex
+
 
 `
 
@@ -32,13 +29,13 @@ background-size: 635px 357px ;
 const StyledImg =styled('img')`
 margin-top:36%;
 `
-const ImageBox = styled(Box)`
-margin-left:15.5%;
+const ImageBox = styled("div")`
+margin-left:18.3%;
 width: 247px;
 height: 278px;
 flex-shrink: 0
 `
-const ContentBox = styled(Box)`
+const ContentBox = styled("div")`
 margin-left: 6rem;
 margin-top: 8rem;
 
@@ -62,7 +59,7 @@ font-weight: 400;
 margin-top: 15px;
 line-height: normal;
 `
-const ImageBoxs = styled(Box)`
+const ImageBoxs = styled("div")`
 display: flex;
 margin-top: 32px;
 justify-content: space-between;
@@ -70,9 +67,11 @@ justify-content: space-between;
 `
 const Discoverpage = () => {
   return (
-    <>
-    <MainContainer>
-       <StyledContainer>
+    <div className='discover-main-div' style={{
+        background: `#FFF9E5 url(${BackgroundImg}) no-repeat  center`,
+        backgroundSize: "635px 357px",
+    }}>
+       <div className='discover-div'>
         <ImageBox>
             <StyledImg src={PhoneImg}></StyledImg>
         </ImageBox>
@@ -93,9 +92,8 @@ const Discoverpage = () => {
         </ImageBoxs>
        
     </ContentBox>
-       </StyledContainer>
-    </MainContainer>
-    </>
+       </div>
+    </div>
   )
 }
 

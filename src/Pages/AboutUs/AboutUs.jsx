@@ -54,7 +54,10 @@ const AboutUs = () => {
     <>
       <div className="about-us-main-div">
         <div
-          style={{ background: `url(${BackgroundImg})  center` }}
+        style={{
+          background: ` url(${BackgroundImg}) no-repeat center center`,
+          backgroundSize: "750px 534px",
+        }}
           className="about-us-div"
         >
           <div className="about-us-main-box">

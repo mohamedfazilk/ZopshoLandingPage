@@ -6,6 +6,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid'
+import '../../css/getTouch.css'
+// import animation from '../../assets/location.json'
+import Lottie from 'react-lottie';
 
 const MainContainer = styled(Container)`
 width: 1535px;
@@ -83,9 +86,15 @@ height:22px;
 `
 const GetTouch = () => {
 
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    // animationData: animation,
+  };
+
   return (
-    <div>
-        <MainContainer>
+    <div className='gettouch-main-div'>
+      <div className='gettouch-div'>
         <Grid container justifyContent="center" >
         <StyledCard>
           <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
@@ -104,6 +113,9 @@ const GetTouch = () => {
 
         </CardMedia>
         <StyledCardContent>
+          <div>
+          <Lottie options={lottieOptions} height={122} width={122} />
+          </div>
           <StyledDetails>
           42/89 A1 First Floor, Kakkanad , Kakkand Road , Eranakulam, India, Kerala
           </StyledDetails>
@@ -115,8 +127,8 @@ const GetTouch = () => {
      
     </StyledCard>
     </Grid>
+    </div>
  
-        </MainContainer>
 
     </div>
   )

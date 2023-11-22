@@ -9,20 +9,33 @@ import OrderContent from "../OrderContent/OrderContents";
 import Service from "../Service/Service";
 
 const Main = () => {
+  const isMobile = window.innerWidth <= 510;
   return (
     <div
       style={{
         width: "100%",
+        overflowX:'hidden'
       }}
     >
       <Header />
       <Home />
-      <OrderContent />
-      <Service />
+      {isMobile ?(
+        <>
+          <Service />
+          <OrderContent />
+    
+        </>
+      ):(
+        <>
+         <OrderContent />
+         <Service />
+        </>
+      )}
+    
       <AboutUs />
-      {/* <GetTouch /> */}
-      {/* <Discoverpage /> */}
-      {/* <Footer /> */}
+      <GetTouch />
+      <Discoverpage />
+      <Footer />
     </div>
   );
 };

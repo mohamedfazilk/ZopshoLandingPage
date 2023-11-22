@@ -4,7 +4,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Container, styled } from "@mui/material";
+import { Container, styled, } from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import BackgroundImg from "../../assets/backgroundvector.svg";
 import MedicineImg from "../../assets/medicine.svg";
 import MedicalLab from "../../assets/medicallab.svg";
@@ -42,17 +43,47 @@ const VerticalDivider = styled("div")({
   marginTop: "8%",
 });
 
+const ServiceHeading = styled(Typography)`
+color: #172F35;
+font-family: Inter;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+`
+
+const ServiceSubheading = styled(Typography)`
+color: #686868;
+    font-family: Questrial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+`
+
 const Service = () => {
+  // const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   return (
     <>
-      <div className="service-main-div">
+    {/* {
+isMobile ?(
+  <>
+  dhdj
+  </>
+):(
+<> */}
+
+<div className="service-main-div"    style={{
+        background: ` url(${BackgroundImg}) no-repeat center center`,
+        backgroundSize: "635px 357px",
+      }}>
         <div className="service-div">
           <CustomBox>
             <Card
               sx={{
                 display: "flex",
-                width: "312px",
-                height: "133px",
+                width: "285px",
+                height: "124px",
                 backgroundColor: "transparent",
                 border: "1px solid #CBCBCB",
                 borderRadius: "12px",
@@ -65,29 +96,29 @@ const Service = () => {
                 component="img"
                 alt="Live from space album cover"
                 image={MedicineImg}
-                sx={{ width: 49, height: 59.316, marginTop: "11%" }}
+                sx={{ width: 49, height: 59.316, marginTop: "11%", marginLeft:'17px' }}
               />
               <VerticalDivider />
               <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-                <CardContent sx={{ flex: "1 0 auto" }}>
-                  <Typography component="div" variant="subtitle">
+                <CardContent sx={{ flex: "1 0 auto", mt:'37px',padding:'3px'  }}>
+                  <ServiceHeading component="div" variant="subtitle">
                     Medicine
-                  </Typography>
-                  <Typography
+                  </ServiceHeading>
+                  <ServiceSubheading
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"
                   >
                     Delivery service
-                  </Typography>
+                  </ServiceSubheading>
                 </CardContent>
               </Box>
             </Card>
             <Card
               sx={{
                 display: "flex",
-                width: "312px",
-                height: "133px",
+                width: "285px",
+                height: "124px",
                 backgroundColor: "transparent",
                 border: "1px solid #CBCBCB",
                 borderRadius: "12px",
@@ -100,21 +131,24 @@ const Service = () => {
                 component="img"
                 alt="Live from space album cover"
                 image={PetMedicine}
-                sx={{ width: 57, height: 51.571, marginTop: "11%" }}
+                sx={{ width: 57, height: 51.571, marginTop: "11%", marginLeft:'17px' }}
               />
               <VerticalDivider />
               <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-                <CardContent sx={{ flex: "1 0 auto" }}>
-                  <Typography component="div" variant="subtitle">
-                    Medicine
-                  </Typography>
-                  <Typography
+                <CardContent sx={{ flex: "1 0 auto", mt:'46px', padding:'3px' }}>
+                  <ServiceHeading component="div" variant="subtitle">
+                    Pet Medicine
+                  </ServiceHeading>
+                  <ServiceSubheading
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"
+                    style={{
+
+                    }}
                   >
                     Delivery service
-                  </Typography>
+                  </ServiceSubheading>
                 </CardContent>
               </Box>
             </Card>
@@ -152,8 +186,8 @@ const Service = () => {
             <Card
               sx={{
                 display: "flex",
-                width: "312px",
-                height: "133px",
+                width: "285px",
+                height: "124px",
                 backgroundColor: "transparent",
                 border: "1px solid #CBCBCB",
                 borderRadius: "12px",
@@ -166,29 +200,29 @@ const Service = () => {
                 component="img"
                 alt="Live from space album cover"
                 image={MedicalLab}
-                sx={{ width: 41, height: 58.938, marginTop: "11%" }}
+                sx={{ width: 41, height: 58.938, marginTop: "11%", marginLeft:'42px' }}
               />
               <VerticalDivider />
               <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-                <CardContent sx={{ flex: "1 0 auto" }}>
-                  <Typography component="div" variant="subtitle">
-                    Medicine
-                  </Typography>
-                  <Typography
+                <CardContent sx={{ flex: "1 0 auto",ml:'-2rem', mt:'35px' }}>
+                  <ServiceHeading component="div" variant="subtitle">
+                    Medical Lab
+                  </ServiceHeading>
+                  <ServiceSubheading
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"
                   >
                     Delivery service
-                  </Typography>
+                  </ServiceSubheading>
                 </CardContent>
               </Box>
             </Card>
             <Card
               sx={{
                 display: "flex",
-                width: "312px",
-                height: "133px",
+                width: "285px",
+                height: "124px",
                 backgroundColor: "transparent",
                 border: "1px solid #CBCBCB",
                 borderRadius: "12px",
@@ -201,21 +235,22 @@ const Service = () => {
                 component="img"
                 alt="Live from space album cover"
                 image={Eyewear}
-                sx={{ width: 41, height: 38.95, marginTop: "11%" }}
+                sx={{ width: 41, height: 38.95, marginTop: "11%", marginLeft:'42px',
+                 marginTop:'52px'  }}
               />
               <VerticalDivider />
               <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-                <CardContent sx={{ flex: "1 0 auto" }}>
-                  <Typography component="div" variant="subtitle">
-                    Medicine
-                  </Typography>
-                  <Typography
+                <CardContent sx={{ flex: "1 0 auto", ml:'-2rem', mt:'35px' }}>
+                  <ServiceHeading component="div" variant="subtitle">
+                    Eye Wear
+                  </ServiceHeading>
+                  <ServiceSubheading
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"
                   >
                     Delivery service
-                  </Typography>
+                  </ServiceSubheading>
                 </CardContent>
               </Box>
             </Card>
@@ -223,8 +258,11 @@ const Service = () => {
         </div>
       </div>
 
+  
       <hr style={{ border: "1px solid", color: "blue", marginTop: "58px" }} />
     </>
+
+
   );
 };
 
