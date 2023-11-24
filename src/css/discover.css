@@ -10,3 +10,20 @@ position:relative;
 margin-top:2%;
 display:flex
 }
+
+
+/*for mobile view*/
+@media (min-width: 320px) and (max-width: 480px) {
+.discover-main-div{
+    background-image: none !important;
+    background-color: white !important;
+}
+.playstore-img{
+    width: 116px;
+}
+.appstore-img{
+    width: 112px;
+    height: 36px;
+
+}
+}

@@ -9,6 +9,10 @@ import Grid from '@mui/material/Grid'
 import '../../css/getTouch.css'
 // import animation from '../../assets/location.json'
 import Lottie from 'react-lottie';
+import WhatsappImg from '../../assets/whatsappColor.svg'
+import FacebookImg from '../../assets/facebookColor.svg'
+import InstaImg from '../../assets/instaColor.svg'
+import LInkedinImg from '../../assets/linkedinColor.svg'
 
 const MainContainer = styled(Container)`
 width: 1535px;
@@ -35,13 +39,26 @@ const VerticalDivider = styled('div')({
   justify-content: center;
   gap: 2rem;
   box-shadow: none;
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  width: 856px;
+  height: 304px;
+  background-color: transparent;
+  border: 1px solid #797979;
+  border-radius: 8px;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: none;
+  margin-top: -1rem;
+   
+  }
 `;
 
-const StyledCardContent = styled(CardContent)`
+const StyledCardContent = styled("div")`
 display: flex;
     flex-direction: column;
     gap: 5px;
-}
 `;
 
 const StyledHeading = styled(Typography)`
@@ -52,6 +69,11 @@ font-size: 26px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+@media (min-width: 320px) and (max-width: 480px) {
+  color:white;
+  font-size: 20px;
+  margin-top: 5%;
+}
 `
 const Styledsubheading = styled(Typography)`
 color: #191919;
@@ -60,6 +82,10 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+@media (min-width: 320px) and (max-width: 480px) {
+  color:white;
+  font-size: 14px;
+}
 `
 
 const StyledDetails = styled(Typography)`
@@ -72,6 +98,11 @@ font-weight: 400;
 line-height: 150%;
 width: 360px;
 height:48px;
+width: 296px;
+
+@media (min-width: 320px) and (max-width: 480px) {
+  color:white
+}
 `
 const StyledWeb = styled(Typography)`
 color: #191919;
@@ -83,7 +114,27 @@ line-height: normal;
 width: 180px;
 height:22px;
 
+@media (min-width: 320px) and (max-width: 480px) {
+  color:white;
+  font-weight: 500;
+  font-size:15px;
+}
+
 `
+const StyledIcons = styled ('div')`
+display: flex;
+justify-content: space-between;
+gap: 1.2rem;
+margin-top: 10%;
+}
+`
+const MobileIcons = styled ("div")`
+  display: none;
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: flex;
+    gap: 1rem;
+
+`;
 const GetTouch = () => {
 
   const lottieOptions = {
@@ -95,9 +146,13 @@ const GetTouch = () => {
   return (
     <div className='gettouch-main-div'>
       <div className='gettouch-div'>
-        <Grid container justifyContent="center" >
-        <StyledCard>
-          <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+        <Grid container justifyContent="center" className='grid-container'>
+        <StyledCard className='main-card'>
+          <Box sx={{ display: 'flex',
+           alignItems: 'center',
+            pl: 1, pb: 1
+            
+            }}>
         <StyledCardContent>
           <Styledsubheading>
           Services are with in minuets 
@@ -107,13 +162,13 @@ const GetTouch = () => {
           </StyledHeading>
         </StyledCardContent>
         </Box>
-    <VerticalDivider />
+    <VerticalDivider className='verticaldivider' />
       <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
         <CardMedia>
 
         </CardMedia>
-        <StyledCardContent>
-          <div>
+        <StyledCardContent className='card-leftcontent'>
+          <div className='location-lottie'>
           <Lottie options={lottieOptions} height={122} width={122} />
           </div>
           <StyledDetails>
@@ -122,6 +177,14 @@ const GetTouch = () => {
           <StyledWeb>
           helpus@zopsho.com
           </StyledWeb>
+          <MobileIcons>
+          <StyledIcons>
+        <img src={WhatsappImg} style={{width:'22px', height:'22px',color:'red'}}></img>
+        <img src={FacebookImg}  style={{width:'22px', height:'22px',color:'#20B038'}}></img>
+        <img src={InstaImg} style={{width:'22px', height:'22px',color:'#20B038'}}></img>
+        <img src={LInkedinImg} style={{width:'22px', height:'22px',color:'#20B038'}}></img>
+        </StyledIcons>
+          </MobileIcons>
         </StyledCardContent>
         </Box>
      

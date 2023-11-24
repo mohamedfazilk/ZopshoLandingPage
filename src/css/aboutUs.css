@@ -58,7 +58,10 @@
 /*for mobile view*/
 @media (min-width: 320px) and (max-width: 480px) {
   .about-us-content-box {
-    width: 350px;
+    width: 288px;
     margin-top: 45px;
+  }
+  .about-us-content-typo{
+    font-size: 13px;
   }
 }

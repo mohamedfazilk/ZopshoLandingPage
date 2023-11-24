@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Container, styled, } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import BackgroundImg from "../../assets/backgroundvector.svg";
 import MedicineImg from "../../assets/medicine.svg";
@@ -62,17 +63,8 @@ color: #686868;
 `
 
 const Service = () => {
-  // const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   return (
     <>
-    {/* {
-isMobile ?(
-  <>
-  dhdj
-  </>
-):(
-<> */}
-
 <div className="service-main-div"    style={{
         background: ` url(${BackgroundImg}) no-repeat center center`,
         backgroundSize: "635px 357px",

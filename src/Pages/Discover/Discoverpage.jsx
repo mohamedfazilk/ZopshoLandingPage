@@ -28,6 +28,10 @@ background-size: 635px 357px ;
 `
 const StyledImg =styled('img')`
 margin-top:36%;
+
+@media (min-width: 320px) and (max-width: 480px) {
+    display:none;
+}
 `
 const ImageBox = styled("div")`
 margin-left:18.3%;
@@ -39,6 +43,11 @@ const ContentBox = styled("div")`
 margin-left: 6rem;
 margin-top: 8rem;
 
+@media (min-width: 320px) and (max-width: 480px) {
+    margin-left: -18rem;
+    margin-top: 9rem;
+}
+
 `
 const StyledHeading = styled(Typography)`
 x
@@ -48,6 +57,16 @@ font-style: normal;
 font-weight: 501;
 line-height: normal;
 margin-top: 34px;
+
+@media (min-width: 320px) and (max-width: 480px) {
+color: #0E0B34;;
+font-family: Inter;
+font-size: 17px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-right: 25px;
+}
 `
 
 const StyledTypo = styled(Typography)`
@@ -58,11 +77,33 @@ font-style: normal;
 font-weight: 400;
 margin-top: 15px;
 line-height: normal;
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    color: #0E0B34;
+font-family: Questrial;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-right: 31px;
+}
 `
 const ImageBoxs = styled("div")`
 display: flex;
 margin-top: 32px;
 justify-content: space-between;
+@media (min-width: 320px) and (max-width: 480px) {
+   
+}
+`
+
+const PlaystoreBox = styled("div")`
+
+`
+const AppstoreBox = styled("div")`
+
 
 `
 const Discoverpage = () => {
@@ -70,6 +111,8 @@ const Discoverpage = () => {
     <div className='discover-main-div' style={{
         background: `#FFF9E5 url(${BackgroundImg}) no-repeat  center`,
         backgroundSize: "635px 357px",
+        
+        
     }}>
        <div className='discover-div'>
         <ImageBox>
@@ -83,12 +126,12 @@ const Discoverpage = () => {
         Get what you need, when you need it.
         </StyledTypo>
         <ImageBoxs>
-        <Box >
-            <img src={GooglePlayImg} ></img>
-        </Box>
-        <Box>
-            <img src={AppstoreImg} style={{marginRight:'15px'}}></img>
-        </Box>
+        <PlaystoreBox>
+            <img className='playstore-img' src={GooglePlayImg} ></img>
+        </PlaystoreBox>
+        <AppstoreBox>
+            <img  className='appstore-img' src={AppstoreImg} style={{marginRight:'15px'}}></img>
+        </AppstoreBox>
         </ImageBoxs>
        
     </ContentBox>

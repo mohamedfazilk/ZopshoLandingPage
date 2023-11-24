@@ -58,4 +58,9 @@ height: 470px;
 .content-section{
     margin-left: -18%;
 }
+.bottom-div{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
 }

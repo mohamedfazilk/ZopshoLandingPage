@@ -1,3 +1,37 @@
 .gettouch-main-div{
     width: 100%;
 }
+
+.card-leftcontent{
+    margin-top: -7rem;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .location-lottie{
+        display: none;
+    }
+    .gettouch-main-div{
+        margin-top: 13rem;
+ background: #0E0B34;
+ color: white;
+    }
+    .verticaldivider{
+        display: none;
+    }
+    .card-leftcontent{
+        margin-top: 0rem;
+    }
+
+    .main-card{
+        border: none !important;
+        margin-left: 2%;
+        padding: 6px;
+    }
+    .gettouch-div{
+        padding: 19px;
+    }
+    .grid-container{
+        margin-left: -1rem;
+    }
+}
