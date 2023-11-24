@@ -81,7 +81,7 @@ const AboutUs = () => {
                 marketing tools which enable them to engage and acquire
                 customers to grow their business while also providing a reliable
                 We’re here to help you live life the panda way. Spend more time
-                doing what you love
+                doing what you love.
               </p>
             </div>
           </div>
