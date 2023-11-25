@@ -33,19 +33,24 @@ margin-top:36%;
     display:none;
 }
 `
-const ImageBox = styled("div")`
+const PhoneBox = styled("div")`
 margin-left:18.3%;
 width: 247px;
 height: 278px;
-flex-shrink: 0
+flex-shrink: 0;
+@media (min-width: 320px) and (max-width: 480px) {
+ display:none;
+ width:0px;
+ height:0px;
+ }
 `
 const ContentBox = styled("div")`
 margin-left: 6rem;
 margin-top: 8rem;
 
 @media (min-width: 320px) and (max-width: 480px) {
-    margin-left: -18rem;
-    margin-top: 9rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
 }
 
 `
@@ -94,9 +99,7 @@ const ImageBoxs = styled("div")`
 display: flex;
 margin-top: 32px;
 justify-content: space-between;
-@media (min-width: 320px) and (max-width: 480px) {
-   
-}
+
 `
 
 const PlaystoreBox = styled("div")`
@@ -115,9 +118,9 @@ const Discoverpage = () => {
         
     }}>
        <div className='discover-div'>
-        <ImageBox>
+        <PhoneBox className='image-box'>
             <StyledImg src={PhoneImg}></StyledImg>
-        </ImageBox>
+        </PhoneBox>
         <ContentBox>
         <StyledHeading>
         Discover the new zopsho app

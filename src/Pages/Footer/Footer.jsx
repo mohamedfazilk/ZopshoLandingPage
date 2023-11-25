@@ -3,10 +3,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import {Container, styled,css} from '@mui/material';
 import LogoImg from '../../assets/footerlogo.svg'
-import WhatsappImg from '../../assets/whatsappImg.svg'
-import FacebookImg from '../../assets/FaceImg.svg'
-import InstaImg from '../../assets/InstaImg.svg'
-import LInkedinImg from '../../assets/LinkedIMg.svg'
+import WhatsappImg from '../../assets/whatsappColor.svg'
+import FacebookImg from '../../assets/facebookColor.svg'
+import InstaImg from '../../assets/instaColor.svg'
+import LInkedinImg from '../../assets/linkedinColor.svg'
 import '../../css/footer.css'
 
 const MainContainer = styled(Box)`
@@ -107,13 +107,21 @@ const TermsText = styled(Box)`
 display: flex;
 justify-content: space-between;
 gap: 2rem;
+
+@media (min-width: 320px) and (max-width: 480px){
+gap: 1rem;
+}
 `
 
-const StyledIcons = styled(Box)`
+const StyledIcons = styled('div')`
 display: flex;
     justify-content: space-between;
     gap: 1rem;
     margin-top: 3rem;
+    @media (min-width: 320px) and (max-width: 480px) {
+        display: none;
+      }
+    
 
 `
 
@@ -142,6 +150,24 @@ display: flex;
     justify-content: space-between;
     gap: 7rem;
     margin-right: 3rem;
+`
+
+
+const MobileIcons = styled("div")`
+  display: none;
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: flex;
+    margin-top: -5rem;
+    margin-left: 46%;
+    gap: 11px;
+    margin-bottom: 12%;
+}
+  }
+
+`;
+
+const Styleddiv  = styled ("div")`
+
 `
 
 const Footer = () => {
@@ -231,12 +257,17 @@ const Footer = () => {
       </div>
 
 
-      
-
       </div>
        </div>
 
+       <MobileIcons>
+        <img src={WhatsappImg}></img>
+        <img src={FacebookImg}></img>
+        <img src={InstaImg}></img>
+        <img src={LInkedinImg}></img>
+          </MobileIcons>
 
+          <div className='horizontal-line'></div>
        <div className='bottom-div'>
         <StyledCopyright>
             <TermsText>
@@ -244,26 +275,26 @@ const Footer = () => {
         Terms of service
         </CopyrightText>
         <CopyrightText>
-        Terms of service
+       Privacy Policy
         </CopyrightText>
         <CopyrightText>
-        Terms of service
+       Cookies
         </CopyrightText>
         </TermsText>
 
-        <Box>
+        <div className='copyright'>
         
         <AllrightText>
         Copyright © 2023 zopsho. All rights reserved.
         </AllrightText>
-        </Box>
+        </div>
         </StyledCopyright>
     
-        <StyledIcons>
-        <img src={WhatsappImg}></img>
-        <img src={FacebookImg}></img>
-        <img src={InstaImg}></img>
-        <img src={LInkedinImg}></img>
+        <StyledIcons className='icons-div'>
+        <img src={WhatsappImg} className='imgstyles'></img>
+        <img src={FacebookImg} className='imgstyles'></img>
+        <img src={InstaImg} className='imgstyles'></img>
+        <img src={LInkedinImg} className='imgstyles'></img>
         </StyledIcons>
        </div>
        </footer>

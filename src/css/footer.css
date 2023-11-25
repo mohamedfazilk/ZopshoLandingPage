@@ -29,6 +29,8 @@ height: 470px;
 }
 
 
+
+
 /*for mobile view*/
 @media (min-width: 320px) and (max-width: 508px) {
     .Main-footer{
@@ -57,10 +59,30 @@ height: 470px;
 }
 .content-section{
     margin-left: -18%;
+    margin-top: 23%;
 }
 .bottom-div{
     display: flex;
     justify-content: space-around;
     gap: 2rem;
+    padding: 26px;
+    margin-top: 8%;
 }
+.copyright{
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    gap: 1rem;
+}
+.imgstyles{
+    width:19px;
+     height:19px;
+}
+.horizontal-line {
+    background: #444;
+    margin: 1rem;
+    width: 297px;
+height: 1px;
+flex-shrink: 0;
+  }
 }

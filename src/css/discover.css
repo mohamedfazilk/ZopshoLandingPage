@@ -17,6 +17,7 @@ display:flex
 .discover-main-div{
     background-image: none !important;
     background-color: white !important;
+    height: 200px
 }
 .playstore-img{
     width: 116px;
@@ -24,6 +25,8 @@ display:flex
 .appstore-img{
     width: 112px;
     height: 36px;
-
+}
+.image-box img{
+    display: none;
 }
 }

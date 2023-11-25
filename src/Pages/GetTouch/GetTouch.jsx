@@ -133,6 +133,7 @@ const MobileIcons = styled ("div")`
   @media (min-width: 320px) and (max-width: 480px) {
     display: flex;
     gap: 1rem;
+  }
 
 `;
 const GetTouch = () => {

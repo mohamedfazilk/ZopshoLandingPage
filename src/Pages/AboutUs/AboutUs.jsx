@@ -48,6 +48,9 @@ const StyledHr = styled("hr")`
   width: 100%;
   border: 1px solid blue;
   margin-top: 58px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    display:none;
+  }
 `;
 const AboutUs = () => {
   return (
