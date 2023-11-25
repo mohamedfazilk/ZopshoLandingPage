@@ -162,7 +162,6 @@ const MobileIcons = styled("div")`
     gap: 11px;
     margin-bottom: 12%;
 }
-  }
 
 `;
 
@@ -267,7 +266,7 @@ const Footer = () => {
         <img src={LInkedinImg}></img>
           </MobileIcons>
 
-          <div className='horizontal-line'></div>
+          <div className='horizontal-line'>trg</div>
        <div className='bottom-div'>
         <StyledCopyright>
             <TermsText>
