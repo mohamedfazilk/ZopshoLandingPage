@@ -11,6 +11,7 @@ import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import { Link } from "react-scroll";
 import {
   Drawer,
   List,
@@ -55,7 +56,9 @@ const Header = () => {
                     {index === 3 && <ContactsIcon />}
                     {index === 4 && <PersonAddIcon />}
                   </ListItemIcon>
+                  <Link key={index} to={item.path} smooth={true} duration={500}>
                   <ListItemText primary={item.display} />
+                  </Link>
                 </ListItemButton>
               </ListItem>
             );
@@ -69,42 +72,42 @@ const Header = () => {
 
   const nav_title = [
     {
-      path: "/",
+      path: "home",
       display: "Home",
     },
     {
-      path: "/service",
+      path: "service",
       display: "Services",
     },
     {
-      path: "/",
+      path: "aboutUs",
       display: "About Us",
     },
     {
-      path: "/",
+      path: "discover",
       display: "Add a store",
     },
   ];
 
   const nav_title_mobile = [
     {
-      path: "/",
+      path: "home",
       display: "Home",
     },
     {
-      path: "/service",
+      path: "service",
       display: "Services",
     },
     {
-      path: "/",
+      path: "aboutUs",
       display: "About Us",
     },
     {
-      path: "/",
+      path: "discover",
       display: "Add a store",
     },
     {
-      path:'/',
+      path:'gettouch',
       display: "Follow us"
     }
   ];
@@ -207,19 +210,26 @@ const Header = () => {
             {list("right")}
             
           </Drawer>
+          <Link to="home" smooth={true} duration={500}>
           <NavBarLogo src={logoImg} mobileMenu={mobileMenu.right} />
+          </Link>
+          
         </div>
 
         <NavBarLinksBox>
-          {nav_title.map((item, index) => {
-            return <NavBarLink key={index}>{item.display}</NavBarLink>;
-          })}
+        {nav_title.map((item, index) => (
+          <Link key={index} to={item.path} smooth={true} duration={500}>
+            <NavBarLink>{item.display}</NavBarLink>
+          </Link>
+        ))}
         </NavBarLinksBox>
       </div>
 
       <div className="header-content-right">
         <FollowIcon src={followImage} />
-        <NavBarLink>Follow us on</NavBarLink>
+        <Link to="gettouch" smooth={true} duration={500}> {/* Link to the "followUs" Element */}
+          <NavBarLink>Follow us on</NavBarLink>
+        </Link>
       </div>
       <CustomMenuIcon onClick={toggleDrawer("right", true)} />
       
