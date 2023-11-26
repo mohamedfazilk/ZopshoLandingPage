@@ -27,10 +27,26 @@
   align-items: center;
   justify-content: center;
 }
+
+
 /* for tablet view */
 @media (min-width: 768px) and (max-width: 1024px) {
 }
 
 /*for mobile view*/
 @media (min-width: 320px) and (max-width: 480px) {
+  .header-content-right{
+    display: none;
+  }
+  .horizontal-line-header{
+    display: block;
+    background: #495057;
+    width: 100%;
+    height: 1px;
+    border: 1px solid;
+  }
+  .header-content-left .header-content-left-drawer-div img {
+    width: 70px;
+    height: auto;
+  }
 }

@@ -50,6 +50,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+ 
 }
 /* for tablet view */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -57,8 +58,16 @@
 
 /*for mobile view*/
 @media (min-width: 320px) and (max-width: 480px) {
+  .about-us-main-box {
+    margin-top: 420px;
+  }
+  .about-us-content-typo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .about-us-content-box {
     width: 350px;
     margin-top: 45px;
   }
+  
 }
