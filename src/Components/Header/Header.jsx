@@ -5,9 +5,12 @@ import logoImg from "../../assets/logoImg.svg";
 import followImage from "../../assets/followicon.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
 import ContactsIcon from "@mui/icons-material/Contacts";
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import {
   Drawer,
   List,
@@ -41,7 +44,7 @@ const Header = () => {
         }}
       >
         <List>
-          {nav_title.map((item, index) => {
+          {nav_title_mobile.map((item, index) => {
             return (
               <ListItem key={item.index} disablePadding>
                 <ListItemButton>
@@ -50,6 +53,7 @@ const Header = () => {
                     {index === 1 && <FeaturedPlayListIcon />}
                     {index === 2 && <MiscellaneousServicesIcon />}
                     {index === 3 && <ContactsIcon />}
+                    {index === 4 && <PersonAddIcon />}
                   </ListItemIcon>
                   <ListItemText primary={item.display} />
                 </ListItemButton>
@@ -60,6 +64,8 @@ const Header = () => {
       </div>
     );
   };
+
+  
 
   const nav_title = [
     {
@@ -79,6 +85,30 @@ const Header = () => {
       display: "Add a store",
     },
   ];
+
+  const nav_title_mobile = [
+    {
+      path: "/",
+      display: "Home",
+    },
+    {
+      path: "/service",
+      display: "Services",
+    },
+    {
+      path: "/",
+      display: "About Us",
+    },
+    {
+      path: "/",
+      display: "Add a store",
+    },
+    {
+      path:'/',
+      display: "Follow us"
+    }
+  ];
+
   const NavBarLinksBox = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "initial",
@@ -133,6 +163,8 @@ const Header = () => {
     width: "9px",
     height: "9px",
     flexShrink: "0",
+    position: "relative",
+    zIndex: 1,
   }));
 
   const NavBarLogo = styled("img")(({ theme }) => ({
@@ -142,32 +174,41 @@ const Header = () => {
     display: "block",
     objectFit: "contain",
     [theme.breakpoints.down("md")]: {
-      display: "none",
+      display: (props) => (props.mobileMenu ? "none" : "block"),
     },
   }));
   const CustomMenuIcon = styled(MenuIcon)(({ theme }) => ({
     cursor: "pointer",
     display: "none",
     color: "white",
-    marginRight: theme.spacing(5),
+    marginLeft: theme.spacing(5),
     [theme.breakpoints.down("md")]: {
       display: "block",
+      marginLeft:"auto",
     },
   }));
   return (
+    <>
+    
     <div className="header-main-div">
       <div className="header-content-left">
         <div className="header-content-left-drawer-div">
           {" "}
-          <CustomMenuIcon onClick={toggleDrawer("right", true)} />
           <Drawer
             anchor="right"
             open={mobileMenu["right"]}
             onClose={toggleDrawer("right", false)}
+            style={{width:"200px"}}
           >
+          <div style={{ textAlign: 'right', padding: '10px' }}>
+              <IconButton onClick={toggleDrawer("right", false)}>
+                <CloseIcon />
+              </IconButton>
+              </div>
             {list("right")}
+            
           </Drawer>
-          <NavBarLogo src={logoImg} />
+          <NavBarLogo src={logoImg} mobileMenu={mobileMenu.right} />
         </div>
 
         <NavBarLinksBox>
@@ -181,7 +222,16 @@ const Header = () => {
         <FollowIcon src={followImage} />
         <NavBarLink>Follow us on</NavBarLink>
       </div>
+      <CustomMenuIcon onClick={toggleDrawer("right", true)} />
+      
+
     </div>
+    <div className="horizontal-line-header">
+
+    </div>
+    </>
+
+  
   );
 };
 

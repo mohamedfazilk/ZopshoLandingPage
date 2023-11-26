@@ -5,8 +5,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Container, styled, } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import BackgroundImg from "../../assets/backgroundvector.svg";
 import MedicineImg from "../../assets/medicine.svg";
 import MedicalLab from "../../assets/medicallab.svg";
@@ -314,9 +312,9 @@ const Service = () => {
      <div className="Main-slider-div">
      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="firstIndicator active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" className="Indicatorsecond"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" className="Indicatorthird"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -483,7 +481,7 @@ const Service = () => {
 
 
   
-      <hr className="horizontal-line" style={{ border: "1px solid", color: "blue", marginTop: "58px" }} />
+      <hr className="horizontal-line" style={{ border: "1px solid", color: '#525260', marginTop: "58px" }} />
     </>
 
 

@@ -71,6 +71,7 @@
   }
   .about-us-div{
     margin-top: -23%;
+    background: none !important;
   }
   .about-u-styled-para{
     display: none;
@@ -93,4 +94,55 @@
   .about-us-main-box-div{
     margin-right: 25%;
   }
+  .about-us-main-div {
+    margin-top: 17%;
+    
+    }
 }
+@media (min-width: 375px) and (max-width: 508px) {
+  .discover-main-div{
+    margin-left: 1rem;
+  }
+  .about-us-main-box{
+    margin-right: 11%;
+  }
+  .about-us-main-box p{
+    margin-left: 4%;
+    width: 313px;
+  }
+  .about-us-main-div {
+    width: 100%;
+    height: 363px;
+    margin-top: 17%;
+    
+    }
+  }
+
+  @media (min-width: 425px) and (max-width: 508px) {
+    .discover-main-div{
+      margin-left: 1rem;
+    }
+    .about-us-main-box{
+      margin-right: 24%;
+      width: 375px;
+    }
+    .about-us-main-box p{
+
+      width: 374px;
+      margin-left: -5%;
+    }
+    .about-us-main-box-div{
+      margin-right: 36%;
+  }
+  .about-us-div {
+    margin-top: -14%;
+  }
+  .about-us-main-div {
+    width: 100%;
+    height: 294px;
+    
+    }
+  }
+
+
+ 

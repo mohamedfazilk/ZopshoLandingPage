@@ -10,53 +10,6 @@ import animation from "../../assets/animation.json";
 import arrowImg from "../../assets/arrowoutward.svg";
 import "../../css/home.css";
 
-// const MainContainer = styled(Container)`
-//   width: 100%;
-//   height: 745px;
-//   background: #0e0b34 url(${BackroundImg}) repeat-x right;
-//   background-size: 600px 442px;
-//   background-repeat: no-repeat;
-//   display: flex;
-// `;
-// const StyledContainer = styled(Container)``;
-// const StyledLeft = styled(Box)`
-//   padding-top: 10rem;
-//   margin-bottom: 14px;
-// `;
-
-// const StyledHeading = styled(Typography)`
-//   color: #fff;
-//   font-family: Dela Gothic One;
-//   font-size: 40px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: normal;
-// `;
-
-// const ArrowImg = styled("img")`
-//   margin-left: 17rem;
-//   width: 237px;
-//   height: 17px;
-// `;
-
-// const StyledTypo = styled(Typography)`
-//   color: #fff;
-//   font-family: Dela Gothic One;
-//   font-size: 40px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: normal;
-// `;
-
-// const StyledText = styled(Typography)`
-//   color: #fff;
-//   font-family: Questrial;
-//   font-size: 20px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: normal;
-// `;
-
 const ButtonBox = styled(Box)`
   display: flex;
   gap: 2rem;
@@ -100,31 +53,6 @@ const ContactNowText = styled(Typography)`
   `}
 `;
 
-// const LottieWrapper = styled(Box)`
-//   position: absolute;
-//   top: 65%;
-//   right: 12%;
-//   width: 122px;
-//   height: 122px;
-//   transform: translate(-50%, -50%);
-// `;
-
-// const RightContainer = styled(Box)`
-//   height: 100vh;
-//   width: 100%;
-// `;
-// const StyledImg = styled(Box)`
-//   margin-left: 11rem;
-//   margin-top: 15rem;
-//   width: 303px;
-
-//   @media (max-width: 768px) {
-//     width: 100%;
-//   }
-// `;
-// const DeliveryImage = styled("img")`
-//   width: 100%;
-// `;
 
 const Home = () => {
   const lottieOptions = {

@@ -1,9 +1,8 @@
 import { styled } from "@mui/material";
 import { Box, Typography } from "@mui/material";
-import Grid from "@mui/material/Grid";
 import React from "react";
 import "../../css/orderContent.css";
-import Slider from "react-slick";
+
 
 const OrderTextBox = styled(Box)(() => ({
   display: "flex",
@@ -112,48 +111,13 @@ const OrderContents = () => {
                    ))}
         </div>
         <div className="main-slider-div">
-        {/* <Slider className="main-slider" {...settings}>
-        {orders.map((order, index) => (
-        <OrderTextBox className="slider-box" key={index}>
-            <NumberText>{order.number}</NumberText>
-            <OrderContent>
-              <Typography
-                sx={{
-                  color: "#08005F",
-
-                  fontFamily: "Inter",
-                  fontSize: "22px",
-                  fontStyle: "normal",
-                  fontWeight: "600",
-                  lineHeight: "normal",
-                }}
-              >
-             {order.title}
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#828282",
-                  marginTop: "5%",
-                  fontFamily: "Questrial",
-                  fontSize: "14px",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  lineHeight: "166.023%",
-                }}
-              >
-              {order.description}
-              </Typography>
-            </OrderContent>
-          </OrderTextBox>
-                   ))}
-          </Slider> */}
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  <ol class="carousel-indicators order-carousel">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="indicator1 active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" className="indicator2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" className="indicator3"></li>
   </ol>
-  <div class="carousel-inner">
+  <div class="carousel-inner order-div-inner">
     <div class="carousel-item active">
         <OrderTextBox className="slider-box">
             <NumberText>01</NumberText>
@@ -261,7 +225,8 @@ const OrderContents = () => {
         </div>
        
       </div>
-      <hr className="horizontal-line" style={{ border: "1px solid", color: "blue", marginTop: "58px" }} />
+      <div className='horizontal-line-order'></div>
+      <hr className="horizontal-line" style={{ border: "1px solid",     color: '#525260', marginTop: "58px" }} />
     </div>
     // </Box>
   );

@@ -7,12 +7,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid'
 import '../../css/getTouch.css'
-// import animation from '../../assets/location.json'
+import animation from '../../assets/location.json'
 import Lottie from 'react-lottie';
 import WhatsappImg from '../../assets/whatsappColor.svg'
 import FacebookImg from '../../assets/facebookColor.svg'
 import InstaImg from '../../assets/instaColor.svg'
 import LInkedinImg from '../../assets/linkedinColor.svg'
+import { Link } from 'react-router-dom';
 
 const MainContainer = styled(Container)`
 width: 1535px;
@@ -99,9 +100,12 @@ line-height: 150%;
 width: 360px;
 height:48px;
 width: 296px;
+margin-left: 4%;
 
 @media (min-width: 320px) and (max-width: 480px) {
-  color:white
+  color:white;
+  margin-left: 0rem;
+
 }
 `
 const StyledWeb = styled(Typography)`
@@ -113,11 +117,13 @@ font-weight: 501;
 line-height: normal;
 width: 180px;
 height:22px;
+margin-left: 17%;
 
 @media (min-width: 320px) and (max-width: 480px) {
   color:white;
   font-weight: 500;
   font-size:15px;
+  margin-left: 0;
 }
 
 `
@@ -136,12 +142,22 @@ const MobileIcons = styled ("div")`
   }
 
 `;
+
+const StyledDetailsContainer = styled("div")`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    display:none;
+  }
+`;
+
 const GetTouch = () => {
 
   const lottieOptions = {
     loop: true,
     autoplay: true,
-    // animationData: animation,
+    animationData: animation,
   };
 
   return (
@@ -164,26 +180,42 @@ const GetTouch = () => {
         </StyledCardContent>
         </Box>
     <VerticalDivider className='verticaldivider' />
-      <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1,mt:'12%',
+     '@media   (min-width: 320px) and (max-width: 508px)': {
+      mt: '0%',
+    }, }}>
         <CardMedia>
 
         </CardMedia>
         <StyledCardContent className='card-leftcontent'>
-          <div className='location-lottie'>
-          <Lottie options={lottieOptions} height={122} width={122} />
-          </div>
+        <StyledDetailsContainer>
+          <Lottie  options={lottieOptions} width={34} height={34}/>
           <StyledDetails>
+
           42/89 A1 First Floor, Kakkanad , Kakkand Road , Eranakulam, India, Kerala
           </StyledDetails>
+          </StyledDetailsContainer>
+          <StyledDetails className='mobile-only'>
+    42/89 A1 First Floor, Kakkanad, Kakkand Road, Eranakulam, India, Kerala
+  </StyledDetails>
           <StyledWeb>
           helpus@zopsho.com
           </StyledWeb>
           <MobileIcons>
           <StyledIcons>
+          <Link to='https://wa.me/8086447566 '>
         <img src={WhatsappImg} style={{width:'22px', height:'22px',color:'red'}}></img>
+        </Link>
+        <Link to=''>
         <img src={FacebookImg}  style={{width:'22px', height:'22px',color:'#20B038'}}></img>
+        </Link>
+        <Link to='https://instagram.com/zopsho?igshid=OGQ5ZDc2ODk2ZA== '>
         <img src={InstaImg} style={{width:'22px', height:'22px',color:'#20B038'}}></img>
+        </Link>
+        <Link to='https://www.linkedin.com/company/zopsho/ '>
         <img src={LInkedinImg} style={{width:'22px', height:'22px',color:'#20B038'}}></img>
+        </Link>
+    
         </StyledIcons>
           </MobileIcons>
         </StyledCardContent>

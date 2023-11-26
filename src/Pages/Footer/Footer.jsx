@@ -8,6 +8,7 @@ import FacebookImg from '../../assets/facebookColor.svg'
 import InstaImg from '../../assets/instaColor.svg'
 import LInkedinImg from '../../assets/linkedinColor.svg'
 import '../../css/footer.css'
+import { Link } from 'react-router-dom';
 
 const MainContainer = styled(Box)`
 background: #1F1F1F;
@@ -260,13 +261,21 @@ const Footer = () => {
        </div>
 
        <MobileIcons>
+        <Link  to='https://wa.me/8086447566 '>
         <img src={WhatsappImg}></img>
+        </Link>
+       
         <img src={FacebookImg}></img>
+        <Link to='https://instagram.com/zopsho?igshid=OGQ5ZDc2ODk2ZA== '>
         <img src={InstaImg}></img>
+        </Link>
+        <Link to='https://www.linkedin.com/company/zopsho/ '>
         <img src={LInkedinImg}></img>
+        </Link>
+       
           </MobileIcons>
 
-          <div className='horizontal-line'>trg</div>
+          <div className='horizontal-line-footer'></div>
        <div className='bottom-div'>
         <StyledCopyright>
             <TermsText>
@@ -290,7 +299,7 @@ const Footer = () => {
         </StyledCopyright>
     
         <StyledIcons className='icons-div'>
-        <img src={WhatsappImg} className='imgstyles'></img>
+        <img src={WhatsappImg}  className='imgstyles'></img>
         <img src={FacebookImg} className='imgstyles'></img>
         <img src={InstaImg} className='imgstyles'></img>
         <img src={LInkedinImg} className='imgstyles'></img>

@@ -5,6 +5,9 @@
 .card-leftcontent{
     margin-top: -7rem;
 }
+.mobile-only{
+    display: none;
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
 
@@ -20,7 +23,7 @@
         display: none;
     }
     .card-leftcontent{
-        margin-top: 0rem;
+        margin-top: 2%;
     }
 
     .main-card{
@@ -34,4 +37,18 @@
     .grid-container{
         margin-left: -1rem;
     }
+    .mobile-only{
+        display: block;
+    }
 }
+@media (min-width: 375px) and (max-width: 508px) {
+    .grid-container {
+      margin-left: 0rem;
+    }
+    .lottie-mob{
+        display: none;
+    }
+    .card-leftcontent{
+        margin-top: 0rem;
+    }
+    }

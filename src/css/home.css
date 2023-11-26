@@ -116,7 +116,8 @@
   .main-home-div {
     flex-direction: column;
     height: 700px;
-    background-size: 331px 635px!important;
+    background: #0e0b34  url('../assets/background.svg') no-repeat !important;
+    background-size:331px 635px !important;
   }
   .home-div {
     flex-direction: column;    
@@ -171,7 +172,13 @@
     width: 98px;
     height: 122px;
   }
+ 
 }
+@media (min-width: 375px) and (max-width: 508px) {
+  .home-styled-left {margin-left: 7%;
+  }
+}
+
 
 /* for tablet view */
 @media (min-width: 768px) and (max-width: 1024px) {

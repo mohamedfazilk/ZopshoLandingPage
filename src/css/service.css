@@ -17,6 +17,50 @@
   display: block;
 }
 
+.carousel-indicators{
+  bottom: -39%;
+}
+
+/* Change the color of the active indicator */
+
+
+.carousel-indicators li.firstIndicator {
+  border: 4px;
+  width: 8px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color:  #d9d9d9;  
+}
+.carousel-indicators li.Indicatorsecond {
+  border: 4px;
+  width: 8px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: #d9d9d9; 
+}
+
+.carousel-indicators li.Indicatorthird {
+  border: 4px;
+  width: 8px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: #d9d9d9; 
+}
+
+.carousel-indicators li.active {
+  border: 4px;
+  width: 13px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: #5d5656; 
+}
+
+
+
 /* for tablet view */
 @media (min-width: 768px) and (max-width: 1024px) {
 }
@@ -52,3 +96,14 @@
     margin-bottom: 0%;
   }
 }
+@media (min-width: 375px) and (max-width: 508px) {
+.carousel-inner {
+  margin-left: 3rem;
+}
+}
+
+@media (min-width: 425px) and (max-width: 508px) {
+  .carousel-inner {
+    margin-left: 5rem;
+  }
+  }

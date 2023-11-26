@@ -46,7 +46,7 @@ const MainBox = styled(Box)`
 `;
 const StyledHr = styled("hr")`
   width: 100%;
-  border: 1px solid blue;
+  border: 1px solid #525260;
   margin-top: 58px;
   @media (min-width: 320px) and (max-width: 480px) {
     display:none;

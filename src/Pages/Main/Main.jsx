@@ -7,36 +7,37 @@ import GetTouch from "../GetTouch/GetTouch";
 import Home from "../Home/Home";
 import OrderContent from "../OrderContent/OrderContents";
 import Service from "../Service/Service";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 const Main = () => {
-  const isMobile = window.innerWidth <= 510;
   return (
-    <div
-      style={{
-        width: "100%",
-        overflowX:'hidden'
-      }}
-    >
-      <Header />
-      <Home />
-      {isMobile ?(
-        <>
-          <Service />
-          <OrderContent />
-    
-        </>
-      ):(
-        <>
-         <OrderContent />
-         <Service />
-        </>
-      )}
-    
-      <AboutUs />
-      <GetTouch />
-      <Discoverpage />
-      <Footer />
-    </div>
+    <Router>
+      <div
+        style={{
+          width: "100%",
+          overflowX:'hidden'
+        }}
+      >
+        <Header />
+        <Home />
+        <Service />
+        <OrderContent />
+        <AboutUs />
+        <GetTouch />
+        <Discoverpage />
+        <Footer />
+
+        {/* <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/order" element={<OrderContent />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/get-touch" element={<GetTouch />} />
+          <Route path="/discover" element={<Discoverpage />} />
+        </Routes> */}
+
+      </div>
+    </Router>
   );
 };
 
