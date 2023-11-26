@@ -22,6 +22,9 @@ const OrderTitle = styled(Typography)(() => ({
   fontStyle: "normal",
   fontWeight: "600",
   lineHeight: "normal",
+  '@media (min-width: 320px) and (max-width: 480px)' :{
+    fontSize: "15px",
+  }
 }));
 const NumberText = styled(Box)(() => ({
   color: "#120A6C",
@@ -42,13 +45,13 @@ const OrderContents = () => {
       number: "01",
       title: "Select your Store",
       description:
-        "From your morning coffee needs to snacks for your late night binge.",
+        "from your morning coffee needs to snacks for your late night binge.",
     },
     {
       number: "02",
       title: "Select your Store",
       description:
-        "From your morning to night, no need to run away.",
+        "from your morning to night, no need to run away.",
     },
     {
       number: "03",
@@ -83,9 +86,9 @@ const OrderContents = () => {
                   color: "#08005F",
 
                   fontFamily: "Inter",
-                  fontSize: "22px",
+                  fontSize: "21px",
                   fontStyle: "normal",
-                  fontWeight: "600",
+                  fontWeight: "501",
                   lineHeight: "normal",
                 }}
               >
@@ -256,7 +259,6 @@ const OrderContents = () => {
   </div>
 </div>
         </div>
-         <div className='horizontal-line'></div>
        
       </div>
       <hr className="horizontal-line" style={{ border: "1px solid", color: "blue", marginTop: "58px" }} />

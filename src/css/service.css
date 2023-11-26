@@ -7,10 +7,16 @@
   justify-content: center;
   gap: 8rem;
   align-items: center;
+  margin-top: 9%;
+    margin-bottom: 10%;
 }
 .mobile-div{
   display: none;
 }
+.horizontal-line{
+  display: block;
+}
+
 /* for tablet view */
 @media (min-width: 768px) and (max-width: 1024px) {
 }
@@ -26,5 +32,23 @@
   }
   .mobile-div{
     display: block;
+  }
+  .Ourservice-div{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .carousel-inner{
+    margin-left: 1rem;
+  }
+  .Main-slider-div{
+    margin-top: 12%;
+  }
+  .horizontal-line{
+    display: none;
+  }
+  .service-div{
+    margin-top: 0%;
+    margin-bottom: 0%;
   }
 }

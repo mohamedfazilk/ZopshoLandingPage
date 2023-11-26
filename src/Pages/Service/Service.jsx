@@ -12,6 +12,7 @@ import MedicineImg from "../../assets/medicine.svg";
 import MedicalLab from "../../assets/medicallab.svg";
 import PetMedicine from "../../assets/petmedicine.svg";
 import Eyewear from "../../assets/eyewear.svg";
+import ArrowIcon from '../../assets/ourServiceIcon.svg'
 import "../../css/service.css";
 
 const StyledContainer = styled(Container)`
@@ -34,7 +35,16 @@ const CustomBox = styled(Box)(() => ({
   height: "297px",
 }));
 
-const Textbox = styled(Box)(() => ({}));
+const Textbox = styled(Box)(() => ({
+
+  '@media (min-width: 320px) and (max-width: 480px)':{
+    display: 'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:'20%',
+  }
+ 
+}));
 
 const VerticalDivider = styled("div")({
   background: "#E0E0E0",
@@ -42,6 +52,10 @@ const VerticalDivider = styled("div")({
   flexShrink: "0px",
   height: "83px",
   marginTop: "8%",
+  '@media (min-width: 320px) and (max-width: 480px)':{
+    height: '76px'
+  }
+
 });
 
 const ServiceHeading = styled(Typography)`
@@ -51,6 +65,9 @@ font-size: 17px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+@media (min-width: 320px) and (max-width: 480px){
+  font-size: 16px;
+}
 `
 
 const ServiceSubheading = styled(Typography)`
@@ -60,6 +77,10 @@ color: #686868;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (min-width: 320px) and (max-width: 480px){
+      font-size: 15px;
+      margin-top: 5px;
+    }
 `
 
 const Service = () => {
@@ -82,6 +103,7 @@ const Service = () => {
                 justifyContent: "center",
                 gap: "2rem",
                 boxShadow: "none",
+                marginLeft:'5%',
               }}
             >
               <CardMedia
@@ -117,6 +139,8 @@ const Service = () => {
                 justifyContent: "center",
                 boxShadow: "none",
                 gap: "2rem",
+                marginLeft:'5%',
+                
               }}
             >
               <CardMedia
@@ -165,7 +189,7 @@ const Service = () => {
             </Typography>
             <Typography
               sx={{
-                color: "#0E0B34",
+                color: "#08005F",
                 fontFamily: "Inter",
                 fontWeight: "700",
                 fontSize: "30px",
@@ -186,6 +210,8 @@ const Service = () => {
                 justifyContent: "center",
                 boxShadow: "none",
                 gap: "2rem",
+                marginLeft:'3%',
+               
               }}
             >
               <CardMedia
@@ -221,6 +247,7 @@ const Service = () => {
                 justifyContent: "center",
                 boxShadow: "none",
                 gap: "2rem",
+                marginLeft:'3%',
               }}
             >
               <CardMedia
@@ -261,24 +288,28 @@ const Service = () => {
           >
             <Typography
               sx={{
-                color: "#172F35",
+                color: '#0E0B34',
                 fontFamily: "Questrial",
                 fontWeight: "400",
-                fontSize: "14px",
+                fontSize: "15px",
               }}
             >
               Services are with in minutes{" "}
             </Typography>
+            <div className="Ourservice-div">
+            <img src={ArrowIcon}/>
             <Typography
               sx={{
                 color: "#172F35",
                 fontFamily: "Inter",
                 fontWeight: "700",
-                fontSize: "22px",
+                fontSize: "20px",
               }}
             >
-              Our services
+             
+          Our services
             </Typography>
+            </div>
           </Textbox>
      <div className="Main-slider-div">
      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -289,6 +320,7 @@ const Service = () => {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
+      <div>
     <Card
               sx={{
                 display: "flex",
@@ -310,7 +342,7 @@ const Service = () => {
               />
               <VerticalDivider />
               <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-                <CardContent sx={{ flex: "1 0 auto", mt:'37px',padding:'3px'  }}>
+                <CardContent sx={{ flex: "1 0 auto", mt:'18px',padding:'3px'  }}>
                   <ServiceHeading component="div" variant="subtitle">
                     Medicine
                   </ServiceHeading>
@@ -324,6 +356,7 @@ const Service = () => {
                 </CardContent>
               </Box>
             </Card>
+            </div>
     </div>
     <div class="carousel-item">
             <Card
@@ -347,7 +380,7 @@ const Service = () => {
               />
               <VerticalDivider />
               <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-                <CardContent sx={{ flex: "1 0 auto", mt:'46px', padding:'3px' }}>
+                <CardContent sx={{ flex: "1 0 auto", mt:'18px', padding:'3px' }}>
                   <ServiceHeading component="div" variant="subtitle">
                     Pet Medicine
                   </ServiceHeading>
@@ -388,7 +421,7 @@ const Service = () => {
               />
               <VerticalDivider />
               <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-                <CardContent sx={{ flex: "1 0 auto",ml:'-2rem', mt:'35px' }}>
+                <CardContent sx={{ flex: "1 0 auto",ml:'-2rem', mt:'18px' }}>
                   <ServiceHeading component="div" variant="subtitle">
                     Medical Lab
                   </ServiceHeading>
@@ -423,11 +456,11 @@ const Service = () => {
                 alt="Live from space album cover"
                 image={Eyewear}
                 sx={{ width: 41, height: 38.95, marginTop: "11%", marginLeft:'42px',
-                 marginTop:'52px'  }}
+                 marginTop:'41px'  }}
               />
               <VerticalDivider />
               <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-                <CardContent sx={{ flex: "1 0 auto", ml:'-2rem', mt:'35px' }}>
+                <CardContent sx={{ flex: "1 0 auto", ml:'-2rem', mt:'18px' }}>
                   <ServiceHeading component="div" variant="subtitle">
                     Eye Wear
                   </ServiceHeading>
@@ -450,7 +483,7 @@ const Service = () => {
 
 
   
-      <hr style={{ border: "1px solid", color: "blue", marginTop: "58px" }} />
+      <hr className="horizontal-line" style={{ border: "1px solid", color: "blue", marginTop: "58px" }} />
     </>
 
 

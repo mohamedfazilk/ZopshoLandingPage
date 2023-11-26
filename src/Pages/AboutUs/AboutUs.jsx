@@ -65,6 +65,7 @@ const AboutUs = () => {
         >
           <div className="about-us-main-box">
             <div className="about-us-main-box-div">
+              <h5 className="service-text">Services are with in minuets</h5>
               <h4 className="about-u-styled-title">Who are we ?</h4>
 
               <p className="about-u-styled-para">
