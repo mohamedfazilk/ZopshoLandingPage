@@ -57,7 +57,7 @@ const Header = () => {
                     {index === 4 && <PersonAddIcon />}
                   </ListItemIcon>
                   <Link key={index} to={item.path} smooth={true} duration={500}>
-                  <ListItemText primary={item.display} />
+                    <ListItemText primary={item.display} />
                   </Link>
                 </ListItemButton>
               </ListItem>
@@ -68,7 +68,7 @@ const Header = () => {
     );
   };
 
-  
+
 
   const nav_title = [
     {
@@ -107,7 +107,7 @@ const Header = () => {
       display: "Add a store",
     },
     {
-      path:'gettouch',
+      path: 'gettouch',
       display: "Follow us"
     }
   ];
@@ -187,11 +187,11 @@ const Header = () => {
     marginLeft: theme.spacing(5),
     [theme.breakpoints.down("md")]: {
       display: "block",
-      marginLeft:"auto",
+      marginLeft: "auto",
     },
   }));
   return (
-    
+
     <div className="header-main-div">
       <div className="header-content-left">
         <div className="header-content-left-drawer-div">
@@ -200,28 +200,28 @@ const Header = () => {
             anchor="right"
             open={mobileMenu["right"]}
             onClose={toggleDrawer("right", false)}
-            style={{width:"200px"}}
+            style={{ width: "200px" }}
           >
-          <div style={{ textAlign: 'right', padding: '10px' }}>
+            <div style={{ textAlign: 'right', padding: '10px' }}>
               <IconButton onClick={toggleDrawer("right", false)}>
                 <CloseIcon />
               </IconButton>
-              </div>
+            </div>
             {list("right")}
-            
+
           </Drawer>
           <Link to="home" smooth={true} duration={500}>
-          <NavBarLogo src={logoImg} mobileMenu={mobileMenu.right} />
+            <NavBarLogo src={logoImg} mobileMenu={mobileMenu.right} />
           </Link>
-          
+
         </div>
 
         <NavBarLinksBox>
-        {nav_title.map((item, index) => (
-          <Link key={index} to={item.path} smooth={true} duration={500}>
-            <NavBarLink>{item.display}</NavBarLink>
-          </Link>
-        ))}
+          {nav_title.map((item, index) => (
+            <Link key={index} to={item.path} smooth={true} duration={500}>
+              <NavBarLink>{item.display}</NavBarLink>
+            </Link>
+          ))}
         </NavBarLinksBox>
       </div>
 
@@ -232,16 +232,16 @@ const Header = () => {
         </Link>
       </div>
       <CustomMenuIcon onClick={toggleDrawer("right", true)} />
-      
+
 
     </div>
 
 
-    
-    
-    
 
-  
+
+
+
+
   );
 };
 
